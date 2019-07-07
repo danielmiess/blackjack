@@ -1,7 +1,8 @@
-#ifndef CARD_H
-#define CARD_H
+#ifndef CARD_HPP
+#define CARD_HPP
 
 #include <string>
+#include <iostream>
 
 enum class eSuit
 {
@@ -34,15 +35,19 @@ public:
     Card ( eSuit suit, eRank rank );
     ~Card() = default;
 
+    bool operator== ( const Card& rhsCard );
+
     static const std::string GetSuitString ( eSuit suit );
     static const std::string GetRankString ( eRank rank );
 
     eSuit GetSuit() const;
     eRank GetRank() const;
 
+    void Print () const;
+
 private:
     eSuit mSuit;
     eRank mRank;
 };
 
-#endif // CARD_H
+#endif // CARD_HPP

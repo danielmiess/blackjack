@@ -7,6 +7,12 @@ Card::Card ( eSuit suit, eRank rank ) :
 
 }
 
+bool Card::operator== ( const Card& rhsCard )
+{
+    return ( mSuit == rhsCard.mSuit ) &&
+           ( mRank == rhsCard.mRank );
+}
+
 const std::string Card::GetSuitString ( eSuit suit )
 {
     switch ( suit )
@@ -49,3 +55,9 @@ eRank Card::GetRank ( ) const
 {
     return mRank;
 }
+
+void Card::Print () const
+{
+    std::cout << "suit: " << GetSuitString ( mSuit ) << " rank: " << GetRankString ( mRank ) << std::endl;
+}
+
