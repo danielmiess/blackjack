@@ -21,6 +21,8 @@ public:
 
     void Print() const;
 
+    std::vector < Card > GetCards();
+
 protected:
     std::vector < Card > mCards;
 };

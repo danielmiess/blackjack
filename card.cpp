@@ -1,4 +1,5 @@
 #include "card.hpp"
+#include "display.hpp"
 
 Card::Card ( eSuit suit, eRank rank ) :
     mSuit(suit),
@@ -58,6 +59,7 @@ eRank Card::GetRank ( ) const
 
 void Card::Print () const
 {
-    std::cout << "suit: " << GetSuitString ( mSuit ) << " rank: " << GetRankString ( mRank ) << std::endl;
+//    Display::DisplayCardAsciiArt ( *this );
+    std::cout << "Don't use this" << std::endl;
 }
 

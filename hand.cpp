@@ -24,6 +24,11 @@ const unsigned short Hand::GetNumberOfCards()
     return mCards.size();
 }
 
+std::vector < Card > Hand::GetCards()
+{
+    return mCards;
+}
+
 void Hand::Print() const
 {
     for ( const Card& card : mCards )
