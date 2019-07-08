@@ -7,6 +7,11 @@ class Deck : public Hand
 {
 public:
     Deck ();
+    ~Deck() = default;
+
+    void DealCard ( Hand& hand );
+    void DealCards ( unsigned short numberOfCards, Hand& hand );
+
 };
 
 
