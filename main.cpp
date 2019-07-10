@@ -15,8 +15,11 @@ int main ( int argc, char *argv[] )
 //
 //    myHand.Print();
 
-    Game myGame;
-    myGame.StartNewGame();
+    for ( ;; )
+    {
+        Game myGame;
+        myGame.StartNewGame();
+    }
 
     std::cout << "Normal Exit" << std::endl;
     return 0;

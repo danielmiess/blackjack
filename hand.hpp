@@ -15,6 +15,7 @@ public:
     ~Hand() = default;
 
     void AddCard ( const Card card );
+    void RemoveCard ();
     void RemoveCard ( const Card card );
 
     const unsigned short GetNumberOfCards();
@@ -22,6 +23,9 @@ public:
     void Print() const;
 
     std::vector < Card > GetCards();
+
+    int CalculateScore ( ) const;
+    int CalculateScore ( bool isDealerHand ) const;
 
 protected:
     std::vector < Card > mCards;
