@@ -12,6 +12,14 @@ public:
 
     void StartNewGame ();
 
+    void RefreshScreen ( bool revealDealerHand );
+
+    void PrintUserOptions ();
+
+    void InitializeGame();
+
+    void DetermineWinner();
+
 private:
     Deck mDeck;
     Hand mDealerHand;
